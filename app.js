@@ -33,6 +33,7 @@ app.get("/" , function(req , res){
 })
 
 app.get("/latest", function(req , res){
+  
   res.render("content" , {content : posts , starting_content : homeStartingContent });
 });
 
