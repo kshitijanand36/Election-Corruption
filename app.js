@@ -27,13 +27,13 @@ app.use(express.static("public"));
 
 app.get("/" , function(req , res){
 
-  // res.sendFile("home.ejs")
+  res.sendFile(__dirname +  "/index.html");
 
-  res.render("home");
+  // res.render("home");
 })
 
 app.get("/latest", function(req , res){
-  
+
   res.render("content" , {content : posts , starting_content : homeStartingContent });
 });
 
@@ -74,7 +74,7 @@ app.get("/contact" , function(req , res){
   res.render("contact" , {content : contactContent});
 });
 
-app.get("/compose" , function(req , res){
+app.get("/report" , function(req , res){
 
   res.render("compose");
 });
@@ -90,7 +90,7 @@ app.post("/compose" , function(req , res){
 
   posts.push(post);
 
-  res.redirect("/");
+  res.redirect("/latest");
 });
 
 app.listen(process.env.PORT || 3000 , function() {

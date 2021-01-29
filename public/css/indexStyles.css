@@ -1,17 +1,17 @@
 body{
     font-family: 'Montserrat',sans-serif;
-    
+
 }
 #title{
-    background-color:black;
-    color:yellow;
+    background-color:#d3e0ea;
+    color:#4e3d53;
 
 }
 h1,h2,h3,h4,h5,h6{
     font-family:'Montserrat';
     font-weight: 900;
 
-  
+
 }
 
 .big-heading{
@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5,h6{
     line-height: 1.5;
     font-weight: 1000;
     text-align:center;
-    
+
 }
 
 .section-heading{
@@ -66,12 +66,18 @@ h1,h2,h3,h4,h5,h6{
     right:20%;
 }
 
+.main_heading{
+  text-align: center;
+  padding:inherit;
+  margin-top: 5%;
+}
+
 /* Features */
 #features{
     padding:7% 15%;
     background-color: #fff;
     position:relative;
-    
+
 }
 .feature-row{
     padding:4.5%;
@@ -91,21 +97,21 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom:1rem;
 }
 .icon:hover{
-    color:black;
+    color:#d3e0ea;
 }
 
 /* testimonal */
 #testimonials{
     text-align:center;
-    color:black;
-    background-color:white;
+    color:#252525;
+    background-color:#d3e0ea;
 }
 .testimonial-text{
     font-size:3rem;
     line-height: 1.5;
 }
 .testimonial-image{
-    width:20%;  
+    width:20%;
     margin:20px;
 }
 .carousel-item{
@@ -147,12 +153,12 @@ h1,h2,h3,h4,h5,h6{
 /* cta */
 #cta{
     text-align:center;
-    background-color:black;
+    background-color:#d3e0ea;
     padding:20% 15% 20%;
-    color:yellow;
+    color:black;
 }
 h3 #cta {
-    
+
     color:white;
     font-family:'Montserrat';
     font-weight: 1000;
@@ -162,10 +168,10 @@ h3 #cta {
 /* footer Section */
 
 #footer{
-    background-color:black;
+    background-color:white;
     text-align:center;
     padding:8%;
-    color:yellow;
+    color:black;
 }
 .footer-text {
     font-family: 'Montserrat';
@@ -174,6 +180,10 @@ h3 #cta {
 }
 .social-icon{
     margin:2% 1%;
+}
+
+#button{
+  text-decoration: none;
 }
 
 
