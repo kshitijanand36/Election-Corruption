@@ -14,6 +14,9 @@ h1,h2,h3,h4,h5,h6{
 
 }
 
+li {
+    color : red;
+}
 .big-heading{
     font-family: 'Montserrat', sans-serif;
     font-size : 3.5rem;
@@ -50,6 +53,10 @@ h1,h2,h3,h4,h5,h6{
 .nav-link{
     font-size:1.2rem;
     font-family:'Montserrat';
+
+}
+.navbar-light .navbar-nav .nav-link {
+    color: green;
 }
 
 /* Download Button */
@@ -154,7 +161,7 @@ h1,h2,h3,h4,h5,h6{
 #cta{
     text-align:center;
     background-color:#d3e0ea;
-    padding:20% 15% 20%;
+    padding:20% 15% ;
     color:black;
 }
 h3 #cta {
