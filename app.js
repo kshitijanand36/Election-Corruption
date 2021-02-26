@@ -1,4 +1,3 @@
-//jshint esversion:6
 
 
 const express = require("express");
@@ -8,9 +7,7 @@ const app = express();
 // Load the full build.
 var _ = require('lodash');
 
-// Cherry-pick methods for smaller browserify/rollup/webpack bundles.
-var at = require('lodash/at');
-var curryN = require('lodash/fp/curryN');
+
 
 const homeStartingContent = "All the reports posted have been listed down here. You can read any of the reports by clicking on read more.";
 
