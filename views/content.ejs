@@ -5,7 +5,7 @@
   <h1>See the latest happenings here!</h1>
 
   <p>
-    <%= starting_content%>
+    <%= starting_content %>
   </p>
 
   <h2>Some of the rules before you start:-</h2>
@@ -16,11 +16,10 @@
   </ul>
 
 
-<% content.forEach(function(element){ %>
-<%# console.log(element.post_title);  %>
-<%# console.log(element.post_body);  %>
-<h2><%= element.post_title%></h2>
-<p><%= element.post_body.substring(0 , 100) + " ..." %> <a href="/reports/<%=element.post_title%>">Read more</a> </p>
+<% posts.forEach((post)=>{ %>
+
+<h2><%= post.post_title%></h2>
+<p><%= post.post_body.substring(0 , 100) + " ..." %> <a href="/reports/<%=post._id%>">Read more</a> </p>
 
 <%}) %>
 

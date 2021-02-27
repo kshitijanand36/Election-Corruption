@@ -1,5 +1,8 @@
 # Election-Corruption
 
+
+Project created during HackMoL2.0 
+
 This is a web application where you can report any mishappening in the elections and then the concerned authorities will handle the situation
 
 Home page:-
@@ -13,3 +16,4 @@ Latest posts :-
 Report option:-
 <br>
 <img src="Screenshot (265).png" alt="Smiley face" width = "800"  height = "400">
+
