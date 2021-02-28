@@ -8,10 +8,15 @@ const  _ = require('lodash');
 const mongoose  = require("mongoose");
 const credentials = require(__dirname + '/Credentials.js');
 
-// mongoose.connect('mongodb://localhost:27017/ElectionCorruption',{
-//   useNewUrlParser : true,
-//   useUnifiedTopology:true
-// });
+//!  for local testing and development . 
+
+//?   mongoose.connect('mongodb://localhost:27017/ElectionCorruption',{
+//?  useNewUrlParser : true,
+//?    useUnifiedTopology:true
+//?  });
+
+
+//! for deployment
 
 mongoose.connect(credentials.link,{
   useNewUrlParser: true,   
@@ -96,7 +101,7 @@ app.post("/compose" , (req , res)=>{
 
 });
 
-// update
+//* update
 app.get('/update/:id' , (req,res)=>{
 
   const reqd = req.params.id;
@@ -118,7 +123,7 @@ app.post('/update/:id' , (req,res)=>{
 });
 
 
-// delete
+//* delete
 app.post('/delete/:id',(req,res)=>{
 
   const reqd = req.params.id;
