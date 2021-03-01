@@ -125,7 +125,7 @@ app.get('/update/:id' , (req,res)=>{
     }
 
     else{
-      res.render('update' , {thispost : doc});
+      res.render('update' , { thispost : doc });
 
     }
   })
