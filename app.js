@@ -143,7 +143,7 @@ app.post('/update/:id' , (req,res)=>{
       res.render('error');
     }
     else{
-      res.redirect('/reports/' + reqd);
+      res.redirect('/reports/' +reqd);
 
     }
   });
