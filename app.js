@@ -56,6 +56,8 @@ app.get("/" , (req , res)=>{
 app.get("/latest", (req , res)=>{
 
   Post.find({},(err,docs)=>{
+
+
     res.render('content',{
       starting_content : homeStartingContent,
       posts : docs
@@ -117,7 +119,7 @@ app.get('/update/:id' , (req,res)=>{
   const reqd = req.params.id;
 
   Post.findById(reqd, (err,doc)=>{
-    if(err){
+    if(err || doc == null){
 
       res.render('error');
     }
@@ -136,7 +138,7 @@ app.post('/update/:id' , (req,res)=>{
   const updatedBody = req.body.post_body;
 
   Post.findByIdAndUpdate(reqd,{post_title : updatedTitle , post_body : updatedBody} , (err,doc)=>{
-    if(err){
+    if(err || doc == null){
 
       res.render('error');
     }
