@@ -3,9 +3,9 @@
 <h1><%= thispost.post_title %> </h1>
 <p> <%= thispost.post_body %> </p>
 
-<form action="/delete/<%=thispost._id%>" method = 'post'>
+<form class=" "  action="/delete/<%=thispost._id%>"  method = 'post'>
     <button type="submit" class="btn btn-danger">Delete</button>
 </form>
 <br>
-<a href = '/update/<%=thispost._id%>'> <button type="button" class="btn btn-primary">Update</button> </a>
+<a href = '/update/<%=thispost._id%>'> <button type="button" id="btnClear" class="btn btn-primary">Update</button> </a>
 <%- include("partials/footer") %>
