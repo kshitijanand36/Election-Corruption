@@ -6,7 +6,7 @@ const ejs = require("ejs");
 const app = express();
 const  _ = require('lodash');
 const mongoose  = require("mongoose");
-const credentials = require(__dirname + '/Credentials.js');
+// const credentials = require(__dirname + '/Credentials.js');
 
 //!  for local testing and development . 
 
@@ -18,19 +18,24 @@ const credentials = require(__dirname + '/Credentials.js');
 
 //! for deployment
 
-mongoose.connect(credentials.link,{
-  useNewUrlParser: true,   
+mongoose.connect("mongodb+srv://admin-kshitij:Test123@cluster0.cdg7o.mongodb.net/reportsDB?retryWrites=true&w=majority", {
+  useNewUrlParser: true,
   useUnifiedTopology: true
 });
 
+// mongoose.connect(credentials.link,{
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// });
+
 
  const postSchema = new mongoose.Schema({
-   post_title :   { 
+   post_title :   {
      type : String,
      required : true
    },
    post_body : {
-     type : String , 
+     type : String ,
      required : true
    }
  });
@@ -56,10 +61,12 @@ app.get("/" , (req , res)=>{
 app.get("/latest", (req , res)=>{
 
   Post.find({},(err,docs)=>{
+
+
     res.render('content',{
-      starting_content : homeStartingContent, 
+      starting_content : homeStartingContent,
       posts : docs
-    }); 
+    });
   })
 });
 
@@ -67,9 +74,19 @@ app.get("/reports/:id" , (req , res)=>{
 
   const  reqd =  req.params.id;
 
-  
+
   Post.findById(reqd , (err,doc)=>{
-      res.render('post',{thispost : doc});
+      if(err || doc == null){
+
+        res.render('error');
+      }
+
+      else{
+
+        res.render('post',{thispost : doc});
+
+      }
+
   });
 
 
@@ -107,18 +124,33 @@ app.get('/update/:id' , (req,res)=>{
   const reqd = req.params.id;
 
   Post.findById(reqd, (err,doc)=>{
-    res.render('update' , {thispost : doc});
+    if(err || doc == null){
+
+      res.render('error');
+    }
+
+    else{
+      res.render('update' , { thispost : doc });
+
+    }
   })
 });
 
 app.post('/update/:id' , (req,res)=>{
-  const reqd = req.params.id; 
+  const reqd = req.params.id;
 
   const updatedTitle = req.body.post_title;
   const updatedBody = req.body.post_body;
 
   Post.findByIdAndUpdate(reqd,{post_title : updatedTitle , post_body : updatedBody} , (err,doc)=>{
-    res.redirect('/reports/' + reqd);
+    if(err || doc == null){
+
+      res.render('error');
+    }
+    else{
+      res.redirect('/reports/' +reqd);
+
+    }
   });
 });
 
