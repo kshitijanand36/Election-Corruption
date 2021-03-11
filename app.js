@@ -8,10 +8,15 @@ const  _ = require('lodash');
 const mongoose  = require("mongoose");
 // const credentials = require(__dirname + '/Credentials.js');
 
-// mongoose.connect('mongodb://localhost:27017/ElectionCorruption',{
-//   useNewUrlParser : true,
-//   useUnifiedTopology:true
-// });
+//!  for local testing and development . 
+
+  //  mongoose.connect('mongodb://localhost:27017/ElectionCorruption',{
+  //  useNewUrlParser : true,
+  //  useUnifiedTopology:true
+  // });
+
+
+//! for deployment
 
 mongoose.connect("mongodb+srv://admin-kshitij:Test123@cluster0.cdg7o.mongodb.net/reportsDB?retryWrites=true&w=majority", {
   useNewUrlParser: true,
@@ -113,7 +118,7 @@ app.post("/compose" , (req , res)=>{
 
 });
 
-// update
+//* update
 app.get('/update/:id' , (req,res)=>{
 
   const reqd = req.params.id;
@@ -150,7 +155,7 @@ app.post('/update/:id' , (req,res)=>{
 });
 
 
-// delete
+//* delete
 app.post('/delete/:id',(req,res)=>{
 
   const reqd = req.params.id;
