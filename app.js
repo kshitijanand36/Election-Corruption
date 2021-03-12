@@ -1,5 +1,5 @@
 
-
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -18,7 +18,7 @@ const credentials = require(__dirname + '/Credentials.js');
 
 //! for deployment
 
-mongoose.connect(credentials.link,{
+mongoose.connect(process.env.DB_LINK,{
   useNewUrlParser: true,   
   useUnifiedTopology: true
 });

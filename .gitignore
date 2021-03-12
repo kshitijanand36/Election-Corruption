@@ -1,3 +1,4 @@
 public/favicon.png
 node_modules/
 Credentials.js
+.env
