@@ -8,6 +8,7 @@ const  _ = require('lodash');
 const mongoose  = require("mongoose");
 
 
+
 //! Routers
 const DeleteRouter = require('./routes/Delete')
 const UpdateRouter = require('./routes/Update');
@@ -39,7 +40,9 @@ app.use(express.static("public"));
    mongoose.connect('mongodb://localhost:27017/ElectionCorruption',{
    useNewUrlParser : true,
    useUnifiedTopology:true
-  });
+
+})
+
 
 
 //! for deployment
