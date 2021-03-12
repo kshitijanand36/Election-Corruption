@@ -16,13 +16,6 @@
     "lodash": "^4.17.20",
     "mongoose": "^5.11.18",
     "path": "^0.12.7"   
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kshitijanand36/Election-Corruption.git"
-  },
-  "bugs": {
-    "url": "https://github.com/kshitijanand36/Election-Corruption/issues"
-  },
-  "homepage": "https://github.com/kshitijanand36/Election-Corruption#readme"
+  }
+  
 }
