@@ -6,7 +6,6 @@ const ejs = require("ejs");
 const app = express();
 const  _ = require('lodash');
 const mongoose  = require("mongoose");
-// const credentials = require(__dirname + '/Credentials.js');
 
 
 //! Routers
@@ -51,7 +50,7 @@ app.use(express.static("public"));
 // });
 
 
-app.listen(process.env.PORT || 3000 , ()=> {
+app.listen(process.env.PORT || 3000 , ()=>   {
   console.log("Server started on port 3000");
 });
 
