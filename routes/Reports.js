@@ -1,8 +1,6 @@
 const express = require('express');
 const router =  express.Router();
 const Post = require('../models/PostModel');
-const bodyParser = require("body-parser");
-router.use(bodyParser.urlencoded({extended: true}));
 
 router.get("/reports/:id" , (req , res)=>{
 
