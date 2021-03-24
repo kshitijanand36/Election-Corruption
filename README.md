@@ -3,7 +3,7 @@
 
 Project created during HackMoL2.0 
 
-This is a web application where you can report any mishappening in the elections and then the concerned authorities will handle the situation
+This is a web application where you can report any mishappening in the elections and then the concerned authorities will handle the situation. Have built-in features to edit or delete posts.
 
 Home page:-
 <br>
