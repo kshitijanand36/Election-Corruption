@@ -13,7 +13,10 @@ Latest posts :-
 <br>
 <img src="Screenshot (264).png" alt="Smiley face" width = "800"  height = "400">
 <br>
+For viewing this click on "Latest" on the home page.
+<br>
 Report option:-
 <br>
 <img src="Screenshot (265).png" alt="Smiley face" width = "800"  height = "400">
 
+For viewing this click on "Report" on the home page.
