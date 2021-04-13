@@ -4,6 +4,10 @@
 Project created during HackMoL2.0 
 
 This is a web application where you can report any mishappening in the elections and then the concerned authorities will handle the situation. Have built-in features to edit or delete posts.
+## Tech Stack Used:-
+1. <b>Node.js and Express.Js:-</b> For creating the backend
+2. <b>MongoDB database:- </b> For storing the data(blog posts)
+3. <b>EJS:-</b> To enable creation of multiple pages dynamically for each post
 
 ## Home page:-
 <br>
