@@ -26,7 +26,7 @@ This is a web application where you can report any mishappening in the elections
 ### `For viewing this click on "Report" on the home page`.
 
 ### Click on "read more" on any of the posts to view complete blog post on seperate Page(done using EJS).
-<img src="screenshots/Screenshot (282).png" alt="Smiley face" width = "800"  height = "400">
+<img src="screenshots/Screenshot (282).png" alt="Smiley face" width = "750"  height = "300">
 
 ## Made by:
 ### ->Kshitij Anand
